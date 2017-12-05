@@ -18,13 +18,13 @@ GPUs execute all threads within a warp in lockstep, and when threads evaluate a 
 GPUCheck is built with CMake, and requires LLVM 5.0 to be present. Once
 LLVM is installed, GPUCheck can be built with the following commands:
 
-  mkdir build
-  cd build
-  cmake ..
-  make
+    mkdir build
+    cd build
+    cmake ..
+    make
 
 ## Usage
 
 GPUCheck is designed as a loadable LLVM pass module. Given a GPU executable in LLVM IR, GPUCheck can be run as follows:
 
-  opt -load gpuchk/libGpuAnalysis.so -coalesce -bdiverge gpucode.bc
+    opt -load gpuchk/libGpuAnalysis.so -coalesce -bdiverge gpucode.bc
